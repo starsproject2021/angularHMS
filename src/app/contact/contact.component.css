@@ -1,0 +1,19 @@
+
+.info
+{
+    transform:translateY(-15);
+    text-align: center;
+    padding :75px 20px;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background:url(../../assets/img/brain.jfif);
+    font-family:'Raleway',sans-serif;
+    color:#fff;
+    background-position:top;
+    background-size:cover;
+    background-repeat:no-repeat;
+    
+}

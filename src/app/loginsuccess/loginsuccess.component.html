@@ -1,0 +1,46 @@
+<nav   class = "navbar navbar-dark bg-success  navbar-dark">
+
+    <h2> Patient DashBoard</h2>
+
+    <ul class = "navbar-nav">
+        <li class ="nav-item right">
+            <a routerLink = "home" routerLinkActive = "active"  (click)= "navigateToLogin()"class = "nav-link" >Logout</a>
+        </li>
+        </ul>
+
+</nav>
+
+<br>
+<h2> To book appointment please click on below Booking button</h2>
+<br>
+<div class = "example-button-row">
+  <button mat-raised-button color="primary" (click)="openDialog(this.userName)">Booking </button>
+</div>
+
+<br>
+  <h2> Your Booking Details</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Date Of Appointment</th>
+            <th> Reporting Doctor</th>
+            <th> Specialization </th>
+            <th> description </th>
+            <th> Booking Status  </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let patientBooking of patientBookings" >
+            <td> {{ patientBooking.dateOfAppointment }} </td>
+            <td> {{ patientBooking.reportingDoctor }} </td>
+            <td> {{ patientBooking.specialization }} </td>
+            <td> {{ patientBooking.description }} </td>
+            <td>
+                Booking Done Successfully 
+                <br>
+                <a [routerLink] = "['/doctor-booking-details']" >Mail</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

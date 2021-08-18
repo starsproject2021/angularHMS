@@ -1,0 +1,46 @@
+<html>
+  <head> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  /></head>
+  <body>
+    <div class="container-fluid padding">
+      <div class="row padding">   
+    <form #mailform = "ngForm" (ngSubmit) = "mailUser()">
+      <h1 style="text-align: center;"> Mail</h1>
+        <div class="form-group" style=" padding-left: 20%;">
+            <div class="offset-1 col-lg-10">
+            <label for="emailId">Email:</label>
+            <div class="col-sm-7">
+            <input  type="email" class="form-control"  placeholder="Enter Email" name="emailId" [(ngModel)] = "mailuser.emailId" required pattern = "^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #emailId = "ngModel"
+            [class.is-invalid] ="emailId.invalid && emailId.touched">
+          </div>
+             <div  *ngIf= "emailId.errors && (emailId.invalid && emailId.touched)" >
+           <small class = "text-danger" *ngIf= "emailId.errors.required"> Email Id is mandatory Field</small>
+           <small class = "text-danger" *ngIf= "emailId.errors.pattern">Provide valid EmailId</small>
+            </div> 
+            </div>
+            <br>
+         </div>
+
+         <div class="form-group" style=" padding-left: 20%;">
+            <div class="offset-1 col-lg-10">
+            <label for="userName">UserName:</label>
+            <div class="col-sm-7">
+            <input type="text" class="form-control"  placeholder="Enter UserName" name="userName" [(ngModel)] = "mailuser.userName" required #userName = "ngModel"     
+            [class.is-invalid] ="userName.invalid && userName.touched">
+          </div>
+            <small class="text-danger" [class.d-none] ="userName.valid || userName.untouched" >userName is mandatory Field</small>
+          </div>
+          </div>
+          <br>
+    <div class="offset-1 col-lg-15"style=" padding-left: 18.5%;">
+        <button [disabled]="mailform.form.invalid" type="submit" class="btn btn-info">Submit</button>&nbsp;
+        <button routerLink = "home" routerLinkActive = "active" (click)= "navigateToHome()" class = "btn btn-danger" >Home Page</button>
+      </div>
+</form>
+ </div>
+</div>
+</body>
+</html>

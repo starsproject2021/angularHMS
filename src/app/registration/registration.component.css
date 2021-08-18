@@ -1,0 +1,17 @@
+.row
+{
+    background-color:whitesmoke;
+    height: 1000px;
+    box-sizing:border-box;
+    border-radius:30px;
+    box-shadow:12px 12px 22px;
+
+
+}
+
+.row h2
+{
+    font-size: 3rem;
+    font-weight:600;
+    font-family: 'Lobster', cursive;
+}

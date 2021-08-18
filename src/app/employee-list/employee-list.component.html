@@ -1,0 +1,28 @@
+<h2> Employee List</h2>
+
+<button routerLink = "home" routerLinkActive = "active" (click)= "navigateToAdmin()" class = "btn btn-info" >Admin Dashboard</button>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> User Name</th>
+            <th> Email Id</th>
+            <th> Specialization </th>
+            <th> Mobile Number </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees" >
+            <td> {{ employee.userName }} </td>
+            <td> {{ employee.emailId }} </td>
+            <td> {{ employee.specialization }} </td>
+            <td> {{ employee.mobileNumber }} </td>
+            <td>
+                    <button (click)= "updateEmployee(employee.id)" class = "btn btn-info">Update</button>
+                    <button (click)= "deleteEmployee(employee.id)" class = "btn btn-danger" style ="margin-left: 10px;">Delete</button>
+                    <button (click)= "employeeDetails(employee.id)" class = "btn btn-info" style ="margin-left: 10px;">view</button>
+
+            </td>
+        </tr>
+    </tbody>
+</table>

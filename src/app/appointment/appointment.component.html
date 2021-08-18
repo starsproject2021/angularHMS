@@ -1,0 +1,41 @@
+<div class="container">
+    <h2 class = "textual">Appointment Booking Form</h2>
+    <form #BookAppointment = "ngForm" (ngSubmit) = "bookAppoinmentForPatient()">
+     
+      <div class="form-group">
+        <label for="specializations">specialization:</label>
+      <select name="specializations" id="specializations" class="form-control" [(ngModel)]="patientBooking.specialization" #mySelect="ngModel" (change)="onSelectionOfSpecialization(mySelect.value)">
+          <option *ngFor="let specialization of specializationsList" [value]="specialization">
+{{specialization}}
+          </option>
+      </select>
+
+      <label for="doctors">doctor:</label>
+      <select name="doctors" id="doctors" class="form-control" [(ngModel)]="patientBooking.reportingDoctor" #doctors= "ngModel">
+          <option *ngFor="let doctor of doctorsDropDown" [value]="doctor">
+{{doctor}}
+          </option>
+      </select>
+      </div>
+
+      <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker"class="form-control" name="appointmentDatee"  #appointmentDatee= "ngModel" [(ngModel)]="appointmentDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      </div>
+      <div class="form-group">
+      <textarea class="form-control" rows="5"
+      cols="20" #healthDescription = "ngModel" [(ngModel)]="patientBooking.description"  name="description" ngModel required></textarea>
+</div>
+
+<button [disabled]="BookAppointment.form.invalid" type="submit" class="btn btn-info">BookAppointment</button>
+
+    </form>
+  <br>
+
+  </div>
+

@@ -1,0 +1,53 @@
+<div class = "col-md-6 offset-md-3">
+<h3>Create Employees By Admin</h3>
+<form (ngSubmit) = "onSubmit()">
+
+    <div class = "form-group">
+        <label>User Name</label>
+        <input type = "text" class = "form-control" id = "userName"
+            [(ngModel)] = "employee.userName" name = "userName">
+    </div>
+
+    <div class = "form-group">
+        <label>Email Id</label>
+        <input type = "text" class = "form-control" id = "emailId"
+            [(ngModel)] = "employee.emailId" name = "emailId">
+    </div>
+
+    <div class = "form-group">
+        <label>Mobile Number</label>
+        <input type = "text" class = "form-control" id = "mobileNumber"
+            [(ngModel)] = "employee.mobileNumber" name = "mobileNumber">
+    </div>
+
+    <div class = "form-group">
+        <label>Role</label>
+        <input type = "text" class = "form-control" id = "role"
+            [(ngModel)] = "employee.role" name = "role">
+    </div>
+
+    <div class = "form-group">
+        <label>Specialization</label>
+        <input type = "text" class = "form-control" id = "specialization"
+            [(ngModel)] = "employee.specialization" name = "specialization">
+    </div>
+    <div class = "form-group">
+        <label>Gender</label>
+        <input type = "text" class = "form-control" id = "gender"
+            [(ngModel)] = "employee.gender" name = "gender">
+    </div>
+
+    <div class = "form-group">
+        <label>Password</label>
+        <input type = "text" class = "form-control" id = "password"
+            [(ngModel)] = "employee.password" name = "password">
+    </div>
+<br>
+    <div>
+    <button class = "btn btn-success" type ="submit" >Submit</button>
+&nbsp;
+    <button routerLink = "home" routerLinkActive = "active" (click)= "navigateToAdmin()" class = "btn btn-info" >Admin Dashboard</button>
+   
+</div>
+</form>
+</div>

@@ -1,0 +1,26 @@
+<h3><b>View Employee Details</b></h3>
+<div>
+
+      <div>
+        <label> <b>User Name:</b></label>{{employee.userName}}
+      </div>
+        <div>
+            <label> <b>Email:</b></label>{{employee.emailId}}
+        </div>
+        <div>
+            <label> <b>Mobile Number:</b></label>{{employee.mobileNumber}}
+        </div>
+        <div>
+            <label> <b>Specialization:</b></label>{{employee.specialization}}
+        </div>
+        <div>
+            <label> <b>Gender:</b></label>{{employee.gender}}
+        </div>
+
+        <div>
+            <label> <b>password:</b></label>{{employee.password}}
+        </div>
+<br>
+
+        <button routerLink = "home" routerLinkActive = "active" (click)= "navigateToAdmin()" class = "btn btn-info" >Admin Dashboard</button>
+</div>

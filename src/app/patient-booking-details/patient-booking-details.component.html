@@ -1,0 +1,23 @@
+<h2> Your Booking Details</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Date Of Appointment</th>
+            <th> Reporting Doctor</th>
+            <th> Specialization </th>
+            <th> description </th>
+            <th> Booking Status </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let patientBooking of patientBookings" >
+            <td> {{ patientBooking.dateOfAppointment }} </td>
+            <td> {{ patientBooking.reportingDoctor }} </td>
+            <td> {{ patientBooking.specialization }} </td>
+            <td> {{ patientBooking.description }} </td>
+            <td>
+                  Booking Done
+            </td>
+        </tr>
+    </tbody>
+</table>

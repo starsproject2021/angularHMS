@@ -1,0 +1,30 @@
+<h2> Doctor DashBoard</h2>
+<nav   class = "navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class = "navbar-nav">
+ <button routerLink = "home" routerLinkActive = "active" (click)= "navigateToLogin()" class = "btn btn-danger" >Logout</button>
+</ul>
+
+</nav>
+
+<h2>List of Patients Bookings</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> patient name</th>
+            <th> bookingdata </th>
+            <th> description </th>
+            <th> Booking Status </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let doctor of doctors" >
+            <td> {{ doctor.userName }} </td>
+            <td> {{ doctor.dateOfAppointment }} </td>
+            <td> {{ doctor.description }} </td>
+            <td>
+                Booking Done Successfully
+            </td>
+        </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<htmL lang ="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Complete Bootstrap Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src ="https://cdnjs.cloudfare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src= "https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+<!---Navigation-->
+<nav class ="navbar navbar-expand-md navbar-light bg-light sticky-top" height="55px">
+   <div class ="container-fluid" >
+       <a class ="navbar-brand" href="#" > <img src="../../assets/img/stars.png" height="100px"> </a>
+       <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+           <span class ="navbar-toggler-icon"></span>
+       </button> -->
+
+
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+           <ul class="navbar-nav ml-auto">
+               <li class="nav-item active">
+                   <a class="nav-link" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                <a class="nav-link" routerLink = "login" >Login/Register</a>
+            </li>
+               <li class="nav-item">
+                <a class="nav-link"  style="color:red;"  routerLink = "admin" >Emergency</a>
+            </li>
+           
+           </ul>
+       </div>
+   </div> 
+</nav>
+
+
+<!--Image Slider-->
+<!-- <div id ="slides" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
+    </ul>
+   
+   <div class="carousel-inner">
+       <div class="carousel-item active">
+        <img src="../../assets/img/about.jpg">
+        <div class="carousel-caption">
+            <h1 class="display-2">Stars Hospital</h1>
+            <br>
+            <h3>Care For You</h3>
+            <button type="button" class="btn btn-outline-light btn-lg">VIEW DEMO</button>
+            <button type="button" class="btn btn-primary btn-lg">Get Started</button>
+        </div>
+       </div>
+
+       <div class="carousel-item">
+           <img src="../../assets/img/medical.jpg">
+       </div>
+
+       <div class="carousel-item">
+        <img src="../../assets/img/1.jfif">
+    </div>
+
+   </div> 
+</div> -->
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+        <img src="../../assets/img/medical1.jpg">
+    </ng-template>  
+    <ng-template carouselSlide>
+      <img src="../../assets/img/health.jpg">
+    </ng-template> 
+      <ng-template carouselSlide>
+        <img src="../../assets/img/about1.jpg">
+      </ng-template>
+  </owl-carousel-o>
+
+<!--Jumbotron-->
+<div class="container-fluid">
+    <div class=" row Jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-12">
+            <p class="lead"> Health is like money. we never have a true idea of its value until we lose it. The Greatest wealth is health.</p>
+        </div>
+    </div>
+</div>
+
+<!--Welcome Section-->
+
+<div class="conatiner-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h1 class="display-4"> Stars Hospital</h1>
+        </div>
+        <hr>
+        <div class="col-12">
+            <p class="lead">Welcome to Stars hospital management system where the patients can book appointments of their choice with 
+                the interested doctor.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--Three Column section -->
+<div class="conatiner-fluid padding">
+   <div class="row text-center padding">
+       <div class="col-xs-12 col-sm-6 col-md-4">
+           <i class ="fas fa-clinic-medical"></i>
+           <h3>Medical</h3>
+           <p>We have a high equipped Hospital with all services.</p>
+       </div>
+       <div class="col-xs-12 col-sm-6 col-md-4">
+           <i class="fas fa-pills"></i>
+               <h3>Medicines</h3>
+               <P>We treat all the people equally and will diagnosis all diseases</P>
+           
+       </div>
+       <div class="col-sm-12 col-md-4">
+           <i class="fas fa-user-md"></i>
+           <h3>Doctor</h3>
+           <p>There are high professioned doctors with great Experience</p>
+       </div>
+   </div> 
+   <hr class="my-4">
+</div>
+<!---Two column Section-->
+<div class="container-fluid padding">
+    <div class="row padding">
+        <div class="col-lg-6">
+            <h2>Departments</h2>
+            <p>There are lot of departments in the Stars Hospital</p>
+            <ul>
+                <li>
+                    Cardiology 
+                </li>
+                <li>
+                    Oncology 
+                </li>
+                <li>
+                    Gynecology 
+                </li>
+                <li>
+                    Physiotherapy 
+                </li>
+                <li>
+                    Neurology 
+                </li>
+                <li>
+                    Dermatologist 
+                </li>
+            
+            </ul>
+           
+            
+            <br> 
+        </div>
+        <div class="col-lg-6">
+            <img src="../../assets/img/2.jfif">
+        </div>
+    </div>
+</div>
+
+<!--Meet the team-->
+<div class="conatiner-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h1 class="display-4">Meet the Team</h1>
+        </div>
+        <hr>
+    </div>
+</div>
+
+<!--Cards-->
+<div class="conatiner-fluid padding">
+    <div class="row padding">
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="../../assets/img/doctor.jfif">
+                <div class="card-body">
+                    <h4 class="card-title">Neurologist Sam</h4>
+                    <p class="card-text">Sam is an great Neurologist he has nearly 20 yeras experience.</p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="../../assets/img/doctor4.jfif">
+                <div class="card-body">
+                    <h4 class="card-title">Dermatologist priya</h4>
+                    <p class="card-text">Priya is  Dermatologist  has nearly 10 years experience.</p>     
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="../../assets/img/doctor3.jfif">
+                <div class="card-body">
+                    <h4 class="card-title">ENT krish</h4>
+                    <p class="card-text">Krish is an great ENT he has nearly 15 yeras experience.</p>
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!---Two column Section-->
+<div class="container-fluid padding" id="twocolumn">
+    <div class="row padding">
+        <div class="col-lg-6">
+            <h2>Our Goal</h2>
+            <P>“Always laugh when you can, it is cheap medicine.”</P>
+            <p>Before you examine the body of a patient,
+                Be patient to learn his story.
+                For once you learn his story,
+                You will also come to know
+                His body.
+                Before you diagnose any sickness,
+                Make sure there is no sickness in the mind or heart.
+                For the emotions in a man’s moon or sun,
+                Can point to the sickness in
+                Any one of his other parts.
+                Before you treat a man with a condition,
+                Know that not all cures can heal all people.
+                For the chemistry that works on one patient,
+                May not work for the next,
+                Because even medicine has its own
+                Conditions.
+                Before asserting a prognosis on any patient,
+                Always be objective and never subjective.
+                For telling a man that he will win the treasure of life,
+                But then later discovering that he will lose,
+                Will harm him more than by telling him
+                That he may lose,
+                But then he wins.</p>
+        </div>
+        <div class="col-lg-6">
+            <img src="../../assets/img/about.jpg" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+
+<!---Connect-->
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12">
+            <h2>Connect
+            </h2>
+        </div>
+        <div class= "col-12 social padding">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<footer>
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <hr class="light">
+                <p>Address</p>
+                <hr class="light">
+                <p>437-224-0545</p>
+                <p>starsproject2021@gmail.com</p>
+                <P>854 Brimorton Drive</P>
+                <p>Toronto,Ontarion,M1g2T5</p>
+            </div>
+
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Our Hours</h5>
+                <hr class="light">
+                <p>Monday:9am-10pm</p>
+                <p>Tuesday:9am-10pm</p>
+                <p>Wednesday:9am-10pm</p>
+            </div>
+
+
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Our Hours</h5>
+                <hr class="light">
+                <p>Thursday:9am-10pm</p>
+                <p>Friday:9am-10pm</p>
+                <p>Saturday:9am-7pm</p>
+                <p>Sunday:9am-6pm</p>
+            </div>
+            <div class="col-12">
+                <hr class ="light">
+                <h5>&copy; starsHospital.com</h5>
+            </div>
+
+        </div>
+
+       
+    </div>
+</footer>
+</body>
+</htmL>
